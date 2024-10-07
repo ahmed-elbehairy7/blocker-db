@@ -9,11 +9,11 @@ def main():
 
     for level in ["high", "low"]:
         with open(join("lists", level), "w", encoding="utf-8") as f:
-            f.write("# This is the start of mafazaa's blocker hosts list\n\n")
+            f.write("# This is the start of mafazaa's defaults list\n\n")
             list(map(lambda x: write_line(x, f), low))
             if level == "high":
                 list(map(lambda x: write_line(x, f), high))
-            f.write("\n# This is the end of mafazaa's blocker hosts list\n")
+            f.write("\n# This is the end of mafazaa's defaults list\n")
 
 
 write_line = lambda x, f: f.write("        ".join(x) + "\n")
